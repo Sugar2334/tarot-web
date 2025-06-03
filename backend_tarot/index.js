@@ -7,7 +7,11 @@ import { generarPrompt } from './generarPrompt.js';
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://senderodelaluna.com.ar',
+  methods: ['POST'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(express.json());
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });

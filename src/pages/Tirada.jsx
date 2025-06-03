@@ -44,7 +44,7 @@ export default function Tirada() {
   const handleInterpretar = async () => {
     setCargando(true);
     try {
-      const response = await fetch('http://localhost:3001/interpretar', {
+      const response = await fetch('https://render-tarot.onrender.com/interpretar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
