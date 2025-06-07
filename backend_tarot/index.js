@@ -8,7 +8,7 @@ import { generarPrompt } from './generarPrompt.js';
 dotenv.config();
 const app = express();
 app.use(cors({
-  origin: 'https://senderodelaluna.com.ar',
+  origin: ['http://localhost:5173' , 'https://senderodelaluna.com.ar'],
   methods: ['POST'],
   allowedHeaders: ['Content-Type']
 }));

@@ -1,205 +1,235 @@
-// archivo: utils/plantillas.js
-
 export const plantillasLectura = {
   General: ({ contexto }) => `
 Contexto sentimental del consultante: "${contexto}"
 
-Realizá una lectura general usando 25 cartas, organizada por aspectos de la vida. Asigná 5 cartas a cada uno de los siguientes ámbitos, con este formato estructurado para cada uno:
+Realiza una lectura general con 25 cartas, organizada por aspectos de la vida. Asigna 5 cartas a cada uno de los siguientes ámbitos, respetando el orden exacto en que salieron:
 
-Aspecto Amor:
-- Situación actual:
-- Influencias:
-- Desafío:
-- Consejo:
-- Resultado final:
+🔹 Amor:
+1. Situación actual
+2. Influencias
+3. Desafío
+4. Consejo
+5. Resultado final
 
-Aspecto Trabajo:
-- Situación actual:
-- Influencias:
-- Desafío:
-- Consejo:
-- Resultado final:
+🔹 Trabajo:
+1. Situación actual
+2. Influencias
+3. Desafío
+4. Consejo
+5. Resultado final
 
-Aspecto Dinero:
-- Situación actual:
-- Influencias:
-- Desafío:
-- Consejo:
-- Resultado final:
+🔹 Dinero:
+1. Situación actual
+2. Influencias
+3. Desafío
+4. Consejo
+5. Resultado final
 
-Aspecto Salud:
-- Situación actual:
-- Influencias:
-- Desafío:
-- Consejo:
-- Resultado final:
+🔹 Salud:
+1. Situación actual
+2. Influencias
+3. Desafío
+4. Consejo
+5. Resultado final
 
-Aspecto Familia:
-- Situación actual:
-- Influencias:
-- Desafío:
-- Consejo:
-- Resultado final:
+🔹 Familia:
+1. Situación actual
+2. Influencias
+3. Desafío
+4. Consejo
+5. Resultado final
 
-Redactá con claridad, profesionalismo y calidez. Respondé como una tarotista empática que guía al consultante en cada área de su vida.`,
+Responde en tono cálido, espiritual y profesional.`,
+
+
+  Pareja: ({ contexto }) => `
+Contexto emocional del consultante: "${contexto}"
+
+Esta lectura de pareja utiliza 6 cartas que deben interpretarse en el siguiente orden exacto:
+
+1. Situación actual de la relación  
+2. Pregunta 1  
+3. Pregunta 2  
+4. Pregunta 3  
+5. Pregunta 4  
+6. Consejo final
+
+Responde en un tono empático, sin juzgar a ninguna de las partes. Cada sección debe conectarse fluidamente con la energía reflejada por la carta asignada.`,
+
 
   Amor: ({ contexto }) => `
 Contexto sentimental del consultante: "${contexto}"
 
-Hacé una lectura centrada en el amor entre el consultante y su vínculo. Desarrollá:
-- Situación actual
-- Influencias
-- Desafío
-- Consejo
-- Resultado final
+Realiza una lectura de 5 cartas enfocada en la situación amorosa actual. Las cartas deben ser interpretadas en el orden exacto en que salieron:
 
-Usá un tono emocional, realista y esperanzador, sin hablar de trabajo, dinero ni salud.`,
+1. Situación actual  
+2. Pregunta 1  
+3. Pregunta 2  
+4. Pregunta 3  
+5. Consejo final
+
+Tono emocional, realista, espiritual y respetuoso.`,
+
 
   Expareja: ({ contexto }) => `
 El consultante escribió: "${contexto}"
 
-Esta lectura de ex pareja fue realizada por la tarotista seleccionando las cartas con el mazo Rider-Waite, de manera intuitiva y conectada con la energía del consultante.  
-No fue el usuario quien eligió las cartas, por lo tanto evitá expresiones como “las cartas que seleccionaste” o similares. Asigná una carta a cada una de estas secciones:
-- Situación actual
-- Pregunta 1
-- Pregunta 2
-- Pregunta 3
-- Pregunta 4
-(Fundadas en el contexto brindado por el consultante)
-- Consejo final
+Esta lectura fue realizada por la tarotista seleccionando las cartas de forma intuitiva. No fue el consultante quien eligió las cartas, por lo tanto evita expresiones como “las cartas que seleccionaste”.
 
-Al final, agregá una recomendación especial: un mensaje reflexivo, empático y emocional que ayude al consultante a cerrar el ciclo, soltar el pasado o enfocarse en su bienestar sentimental.
+La lectura debe seguir exactamente el orden en que salieron las cartas:
 
-Luego de eso, copiá exactamente este texto como cierre de la lectura, sin modificarlo:
+1. Situación actual del vínculo  
+2. Pregunta 1  
+3. Pregunta 2  
+4. Pregunta 3  
+5. Pregunta 4  
+6. Consejo final
 
-Además, considerando lo vivido entre ustedes, podrías trabajar en un proceso energético conocido como endulzamiento.
-Se trata de un ritual muy sutil y respetuoso que ayuda a disipar energías negativas, bloqueos emocionales y abrir nuevamente caminos de amor, deseo y reconciliación.
-Es un impulso dulce que no fuerza voluntades, sino que limpia y favorece la renovación sana del vínculo, permitiendo que todo pueda fluir desde el corazón.
-`.trim(),
+Incluye una recomendación emocional, reflexiva y contenida al final. Luego, cierra la interpretación copiando este mensaje exactamente:
 
-VidasPasadas: ({ nombre, cartas }) => {
-  const c = (i) => cartas[i]?.nombre || '[nombre de la carta]';
-  return `
-Vidas pasadas ${nombre}
+Además, considerando lo vivido entre ustedes, podrías trabajar en un proceso energético conocido como endulzamiento.  
+Se trata de un ritual muy sutil y respetuoso que ayuda a disipar energías negativas, bloqueos emocionales y abrir nuevamente caminos de amor, deseo y reconciliación.  
+Es un impulso dulce que no fuerza voluntades, sino que limpia y favorece la renovación sana del vínculo, permitiendo que todo pueda fluir desde el corazón.`,
 
-Claro, aquí tienes una lectura completa de vidas pasadas para tu cliente ${nombre}, realizada exclusivamente con las cartas del Tarot Rider-Waite, hablándole a él como si estuvieras en consulta personalizada. 
-
-Este tipo de lectura se enfoca en traer a la luz energías, aprendizajes y karmas de otras vidas que influyen en la actual.
-
-🔮 Lectura de Vidas Pasadas para ti, ${nombre}
-
-${nombre}, gracias por abrirte a esta lectura tan profunda. Las cartas que he seleccionado para ti me brindan el siguiente mensaje espiritual. Lo que revelan no son historias literales, sino imágenes simbólicas que nos muestran patrones espirituales, aprendizajes y desafíos que arrastras desde otras encarnaciones y que hoy pueden estar influyendo en tu camino.
-
-Vamos a sumergirnos en esta exploración.
-
-1️⃣ ¿Quién fuiste en una vida pasada significativa?
-Carta: ${c(0)}
-[Interpretación espiritual sobre tu rol e identidad en esa encarnación.]
-
-2️⃣ ¿Qué experiencias marcantes viviste en esa vida?
-Carta: ${c(1)}
-[Lecciones centrales, situaciones poderosas, y aprendizajes clave.]
-
-3️⃣ ¿Qué heridas o karmas arrastras desde esa vida?
-Carta: ${c(2)}
-[Emociones bloqueadas, patrones de apego, dolor, culpa o miedos no resueltos.]
-
-4️⃣ ¿Qué don o sabiduría traes desde esa vida?
-Carta: ${c(3)}
-[Talentos internos o virtudes que tu alma desarrolló y hoy podés aprovechar.]
-
-5️⃣ ¿Qué patrón se repite en esta vida?
-Carta: ${c(4)}
-[Comportamiento que vuelve a aparecer en esta vida por tu historia kármica.]
-
-6️⃣ ¿Cuál es tu misión actual, en esta vida?
-Carta: ${c(5)}
-[Tu propósito espiritual actual conectado con lo no resuelto en la vida pasada.]
-
-7️⃣ Consejo profundo del alma
-Carta: ${c(6)}
-[Mensaje espiritual final que ayude a integrar la experiencia y sanar.]
-
-✨ Resumen final
-
-${nombre}, tu alma viene de experiencias poderosas donde tuviste autoridad y enfrentaste decisiones difíciles. Hoy, traés la fuerza para construir, pero también el reto de liberarte del control, del miedo al deseo y de ciertas cargas emocionales.
-
-Tenés una gran misión: ser vos mismo con alegría, sanar desde el amor, y confiar en tu luz interior.
-
-Las cartas muestran que esta vida es una oportunidad de renacimiento espiritual, y que tenés todo lo necesario para vivir con plenitud si elegís soltar el pasado con conciencia.
-`.trim();
-},
-
-
-  Abundancia: ({ contexto }) => `
-Contexto: "${contexto}"
-
-Lectura centrada en abundancia, prosperidad y protección. Analizá:
-- Situación actual
-- Bloqueos
-- Influencias pasadas
-- Tendencias presentes
-- Oportunidades próximas
-- Futuro cercano
-- Futuro lejano
-
-Tono inspirador, emocional y profundo. Cierre con mensaje esperanzador.`,
-
-  Proteccion: ({ contexto }) => `
-Contexto: "${contexto}"
-
-Lectura centrada en energía y protección. Evaluá:
-- Energía actual
-- Influencias externas
-- Origen del bloqueo
-- Punto vulnerable
-- Cómo protegerse
-- Aliado espiritual
-- Resultado si sigue el consejo
-- Consejo final
-
-Tono protector, empático y espiritual.`,
-
-  Vinculo: ({ contexto }) => `
-Contexto emocional: "${contexto}"
-
-Lectura sobre el vínculo con otra persona. Explorá:
-- Situación actual
-- Qué siente el otro
-- Qué piensa
-- Qué intenciones tiene
-- Si hay terceros
-- Futuro del vínculo
-
-Tono cálido y afectivo. No hablar de trabajo ni salud.`,
-
-  Celta: () => `
-Lectura cruz celta tradicional. Indicá la posición e interpretación de:
-- Situación actual
-- Desafío
-- Influencias del pasado
-- Influencias del presente
-- Influencias del futuro
-- Mente consciente
-- Energía inconsciente
-- Entorno
-- Esperanzas o miedos
-- Resultado final
-
-Tono sabio, ordenado y espiritual.`,
-
-  Tradicional: () => `
-Realizá una lectura tradicional sin estructura fija. Interpretá intuitivamente las cartas seleccionadas según su energía y conexión con el consultante. Tono emocional, libre y profundo.`,
 
   NuevoVinculo: ({ contexto }) => `
 Contexto amoroso: "${contexto}"
 
-Lectura sobre un nuevo vínculo amoroso. Desarrollá:
-- Energía de la conexión
-- Qué siente la otra persona
-- Obstáculos
-- Consejo
-- Posible evolución
+Lectura para un nuevo vínculo. Asigna cada una de las 6 cartas en este orden exacto:
 
-Tono suave, reflexivo y emocional.`
+1. Situación actual de la conexión  
+2. Qué siente la otra persona  
+3. Qué piensa  
+4. Qué intenciones tiene  
+5. Obstáculo o bloqueo  
+6. Consejo final
+
+Tono emocional, claro y espiritual.`,
+
+
+  VidasPasadas: ({ nombre, cartas }) => {
+    const c = (i) => cartas[i]?.nombre || '[nombre de la carta]';
+    return `
+Lectura de vidas pasadas para ${nombre}
+
+Esta lectura fue realizada de forma intuitiva por la tarotista. Las cartas que se han elegido guían esta exploración simbólica y espiritual.
+
+A continuación, interpreta cada carta respetando su orden exacto:
+
+1️⃣ ¿Quién fuiste en una vida pasada significativa?  
+Carta: ${c(0)}  
+[Interpretación espiritual sobre tu rol.]
+
+2️⃣ ¿Qué experiencias marcantes viviste en esa vida?  
+Carta: ${c(1)}  
+[Lecciones clave.]
+
+3️⃣ ¿Qué heridas o karmas arrastras desde esa vida?  
+Carta: ${c(2)}  
+[Conflictos no resueltos.]
+
+4️⃣ ¿Qué don o sabiduría traes desde esa vida?  
+Carta: ${c(3)}  
+[Potenciales y virtudes.]
+
+5️⃣ ¿Qué patrón se repite en esta vida?  
+Carta: ${c(4)}  
+[Ciclo que vuelve.]
+
+6️⃣ ¿Cuál es tu misión espiritual actual?  
+Carta: ${c(5)}  
+[Propósito en esta vida.]
+
+7️⃣ ¿Qué vínculo influye desde otra vida?  
+Carta: ${c(6)}  
+[Relación kármica.]
+
+8️⃣ ¿Qué debes liberar o transformar?  
+Carta: ${c(7)}  
+[Punto clave.]
+
+9️⃣ Consejo profundo del alma  
+Carta: ${c(8)}  
+[Guía espiritual final.]
+
+✨ Cierre espiritual:
+
+${nombre}, esta vida representa una oportunidad para sanar desde el amor, integrar aprendizajes pasados y caminar hacia tu verdad más elevada.
+`.trim();
+  },
+
+
+  Abundancia: ({ contexto }) => `
+Contexto del consultante: "${contexto}"
+
+Realiza una lectura de 10 cartas orientada a desbloquear la abundancia. Sigue este orden exacto:
+
+1. Energía actual  
+2. Bloqueo principal  
+3. Influencias del pasado  
+4. Tendencias presentes  
+5. Oportunidades próximas  
+6. Recursos internos  
+7. Apoyos externos  
+8. Riesgos o distracciones  
+9. Futuro cercano  
+10. Consejo final
+
+El mensaje debe ser motivador, claro, emocional y con visión esperanzadora.`,
+
+
+  Proteccion: ({ contexto }) => `
+Contexto del consultante: "${contexto}"
+
+Lectura energética con 9 cartas. Sigue este orden en la interpretación:
+
+1. Estado energético actual  
+2. Influencias externas  
+3. Origen del bloqueo  
+4. Punto vulnerable  
+5. Cómo protegerte  
+6. Aliado espiritual  
+7. Energía de resolución  
+8. Resultado si sigues el consejo  
+9. Consejo final del alma
+
+Tono protector, empático y sin generar temor.`,
+
+
+  Celta: () => `
+Lectura de cruz celta clásica con 10 cartas. Cada carta representa una posición fija. Interpreta respetando el siguiente orden:
+
+1. Situación actual  
+2. Desafío u obstáculo  
+3. Influencias inconscientes  
+4. Influencias pasadas  
+5. Mente consciente  
+6. Influencia futura  
+7. Tú mismo/a (actitud interna)  
+8. Entorno o influencias externas  
+9. Esperanzas y temores  
+10. Resultado final
+
+Redacta de forma profesional, clara, sin juicios, con enfoque en el crecimiento.`,
+
+
+  Tradicional: () => `
+Lectura sin estructura fija. Interpreta las cartas una por una, siguiendo el orden en que fueron seleccionadas por la tarotista. Cada carta transmite un mensaje único en conexión con la energía del consultante.
+
+Tono emocional, libre, intuitivo, empático y profesional.`,
+
+
+  Vinculo: ({ contexto }) => `
+Contexto emocional: "${contexto}"
+
+Lectura de vínculo de 6 cartas. Interpretación en orden:
+
+1. Situación actual  
+2. Qué siente la otra persona  
+3. Qué piensa  
+4. Qué intenciones tiene  
+5. Influencias externas o terceros  
+6. Posible evolución del vínculo
+
+No incluir temas de salud ni trabajo. Solo aspectos afectivos.`
 };
